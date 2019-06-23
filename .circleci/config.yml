@@ -11,6 +11,13 @@ jobs:
             apt-get update
             apt-get -y install wget unzip
             apt-get update
+            cd tf
+            wget https://releases.hashicorp.com/terraform/0.12.2/terraform_0.12.2_linux_amd64.zip
+            unzip terraform\*.zip
+            export $PATH="$PATH:$PWD"
+            terraform init
+            terraform plan
+            terraform apply --auto-approve
 
 workflows:
   version: 2.1
