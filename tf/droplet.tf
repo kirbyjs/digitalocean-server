@@ -14,5 +14,5 @@ resource "digitalocean_droplet" "kirbyjs_web" {
 }
 
 data "template_file" "user_data" {
-  filename = file("${path.cwd}/resources/user-data.sh")
+  template = file("${path.cwd}/resources/user-data.sh")
 }
