@@ -9,7 +9,7 @@ jobs:
       - run:
           command: |
             apt-get update
-            apt-get install wget unzip
+            apt-get -y install wget unzip
             apt-get update
 
 workflows:
