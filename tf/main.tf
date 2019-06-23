@@ -1,6 +1,5 @@
-data "terraform_remote_state" "default" {
-  backend = "s3"
-  config = {
+terraform {
+  backend "s3" {
     bucket = "kirbyjs-terraform-statefiles"
     key    = "portfolio/backend-service/prod.tf"
     region = "us-east-1"
