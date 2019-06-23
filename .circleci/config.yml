@@ -1,0 +1,21 @@
+version: 2.1
+jobs:
+  deploy-docker-image:
+    docker:
+      - image: ubuntu:18.04
+    working_directory: ~/repo
+
+    steps:
+      - run:
+          command: |
+            apt-get install wget unzip
+            apt-get update
+
+workflows:
+  version: 2.1
+  build-deploy:
+    jobs:
+      - deploy-docker-image:
+          filters:
+            branches:
+              only: master
