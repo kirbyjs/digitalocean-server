@@ -2,15 +2,6 @@ resource "digitalocean_domain" "kirbyjs" {
   name = "kirbyjs.com"
 }
 
-resource "digitalocean_certificate" "kirbyjs" {
-  name = "kirbyjs"
-  type = "lets_encrypt"
-
-  domains = [
-    "kirbyjs.com"
-  ]
-}
-
 resource "digitalocean_floating_ip" "kirbyjs_web" {
   droplet_id = digitalocean_droplet.kirbyjs_web.id
   region     = digitalocean_droplet.kirbyjs_web.region
