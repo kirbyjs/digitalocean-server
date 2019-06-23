@@ -5,7 +5,7 @@ resource "digitalocean_droplet" "kirbyjs_web" {
   monitoring = true
   region     = "nyc1"
   size       = "s-1vcpu-1gb"
-  user_data  = template_file.user_data.rendered
+  user_data  = data.template_file.user_data.rendered
 
   ssh_keys = [
     data.digitalocean_ssh_key.circleci.id,
@@ -13,6 +13,6 @@ resource "digitalocean_droplet" "kirbyjs_web" {
   ]
 }
 
-resource "template_file" "user_data" {
+data "template_file" "user_data" {
   filename = file("${path.cwd}/resources/user-data.sh")
 }
