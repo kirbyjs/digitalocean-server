@@ -8,8 +8,9 @@ jobs:
     steps:
       - run:
           command: |
-            sudo apt-get install wget unzip
-            sudo apt-get update
+            apt-get update
+            apt-get install wget unzip
+            apt-get update
 
 workflows:
   version: 2.1
