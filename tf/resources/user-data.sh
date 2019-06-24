@@ -15,4 +15,5 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose -v
 
-sudo apt-get upgrade
+sudo apt-get upgrade -y
+sudo apt autoremove -y
