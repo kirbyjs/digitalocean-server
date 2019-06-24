@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  deploy-docker-image:
+  create-digitalocean-server:
     docker:
       - image: ubuntu:18.04
     working_directory: ~/repo
@@ -24,7 +24,7 @@ workflows:
   version: 2.1
   build-deploy:
     jobs:
-      - deploy-docker-image:
+      - create-digitalocean-server:
           filters:
             branches:
               only: master
