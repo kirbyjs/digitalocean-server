@@ -3,7 +3,7 @@ resource "digitalocean_droplet" "kirbyjs_web" {
   image      = "ubuntu-18-04-x64"
   ipv6       = true
   monitoring = true
-  region     = "nyc1"
+  region     = "nyc3"
   size       = "s-1vcpu-1gb"
   user_data  = data.template_file.user_data.rendered
 
