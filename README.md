@@ -1,3 +1,3 @@
 ### Digital Ocean Server created w/ Terraform
 
-[![CircleCI](https://circleci.com/gh/kirbyjs/digitalocean-server.svg?style=svg)](https://circleci.com/gh/kirbyjs/digitalocean-server)
+[![Github Actions](https://github.com/kirbyjs/digitalocean-server/workflows/create_digitalocean_server/badge.svg)](https://github.com/kirbyjs/digitalocean-server/actions?workflow=create_digitalocean_server)
