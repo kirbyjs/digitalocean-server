@@ -8,8 +8,8 @@ terraform {
 
 provider "digitalocean" {}
 
-data "digitalocean_ssh_key" "circleci" {
-  name = "circleci"
+data "digitalocean_ssh_key" "github" {
+  name = "github"
 }
 
 data "digitalocean_ssh_key" "macbook_pro" {

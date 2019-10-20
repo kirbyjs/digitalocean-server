@@ -8,7 +8,7 @@ resource "digitalocean_droplet" "kirbyjs_web" {
   user_data  = data.template_file.user_data.rendered
 
   ssh_keys = [
-    data.digitalocean_ssh_key.circleci.id,
+    data.digitalocean_ssh_key.github.id,
     data.digitalocean_ssh_key.macbook_pro.id
   ]
 }
